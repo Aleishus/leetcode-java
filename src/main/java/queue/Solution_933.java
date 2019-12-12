@@ -8,11 +8,11 @@ package queue;
  */
 public class Solution_933 {
 
-    public RecentCounter() {
+    public Solution_933() {
 
     }
 
     public int ping( int t ) {
-
+        return 0;
     }
 }

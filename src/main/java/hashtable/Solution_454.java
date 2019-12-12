@@ -1,3 +1,5 @@
+package hashtable;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,7 +9,7 @@ import java.util.Map;
  * @author xi
  * @description
  */
-public class FourSumCount {
+public class Solution_454 {
 
     public int fourSumCount( int[] A, int[] B, int[] C, int[] D ) {
         Map<Integer, Integer> searchMap = new HashMap<Integer, Integer>(A.length * B.length);

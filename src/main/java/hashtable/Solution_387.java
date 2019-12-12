@@ -1,10 +1,12 @@
+package hashtable;
+
 /**
  * Zhouxi O_o
  *
  * @author xi
  * @description
  */
-public class FirstUniqChar {
+public class Solution_387 {
 
     public int firstUniqChar( String s ) {
         char[] chs = s.toCharArray();
@@ -42,7 +44,7 @@ public class FirstUniqChar {
     }
 
     public static void main( String... args ) {
-        FirstUniqChar firstUniqChar = new FirstUniqChar();
+        Solution_387 firstUniqChar = new Solution_387();
         System.out.println(firstUniqChar.firstUniqChar(""));
     }
 }

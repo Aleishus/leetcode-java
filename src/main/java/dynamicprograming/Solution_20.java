@@ -1,10 +1,12 @@
+package dynamicprograming;
+
 /**
  * Zhouxi O_o
  *
  * @author xi
  * @description
  */
-public class ClimbStairs {
+public class Solution_20 {
 
     public int climbStairs( int n ) {
         if (n == 0) {
@@ -44,8 +46,8 @@ public class ClimbStairs {
 
 
     public static void main( String[] args ) {
-        System.out.println(new ClimbStairs().climbStairs(4));
-        System.out.println(new ClimbStairs().sp(4));
+        System.out.println(new Solution_20().climbStairs(4));
+        System.out.println(new Solution_20().sp(4));
     }
 
 }

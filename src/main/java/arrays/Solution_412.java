@@ -1,3 +1,5 @@
+package arrays;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +9,7 @@ import java.util.List;
  * @author xi
  * @description
  */
-public class FizzBuzz {
+public class Solution_412 {
 
     public List<String> fizzBuzz( int n ) {
         String x = "Fizz";

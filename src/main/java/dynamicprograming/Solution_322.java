@@ -1,4 +1,5 @@
-import java.time.Duration;
+package dynamicprograming;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -11,7 +12,7 @@ import java.util.Map;
  * @author xi
  * @description
  */
-public class CoinChange {
+public class Solution_322 {
 
 
     public int coinChange( int[] coins, int amount ) {
@@ -79,7 +80,7 @@ public class CoinChange {
 
 
     public static void main( String[] args ) {
-        CoinChange coinChange = new CoinChange();
+        Solution_322 coinChange = new Solution_322();
         int[] coins = {1, 2, 5};
         List<List<Integer>> res = new ArrayList<>();
         long m = System.nanoTime();
