@@ -11,7 +11,6 @@ public class Solution_703 {
 
     public Solution_703( int k, int[] nums ) {
         heap = new int[k];
-        Arrays.fill(heap,Integer.MAX_VALUE);
         this.k = k;
         for (int i = 0; i < nums.length; i++) {
             add(nums[i]);
@@ -25,7 +24,8 @@ public class Solution_703 {
         num[j] = tmp;
     }
 
-    private void buildMinHeap( int[] nums, int noLeaf ) {
+    //下滤
+    private void down( int[] nums, int noLeaf ) {
         int left = 2 * noLeaf + 1;
         int right = left + 1;
         int lower = noLeaf;
@@ -37,24 +37,35 @@ public class Solution_703 {
         }
         if (lower != noLeaf) {
             swap(nums, lower, noLeaf);
-            buildMinHeap(nums, lower);
+            down(nums, lower);
         }
+    }
+
+    //上过滤
+    private void up(int[] nums,int noLeaf){
+        if(noLeaf == 0){
+            return;
+        }
+        int parent = (noLeaf-1)/2;
+        if(nums[parent]>nums[noLeaf]){
+            swap(nums,parent,noLeaf);
+            up(nums,parent);
+        }
+
     }
 
 
     public int add( int val ) {
         if (count < k) {
             heap[count++] = val;
-            for (int i = count / 2; i >= 0; i--) {
-                buildMinHeap(heap, i);
-            }
+            up(heap,count-1);
         } else if (val > heap[0]) {
             heap[0] = val;
-            buildMinHeap(heap, 0);
+            down(heap, 0);
         }
         return heap[0];
     }
-   //todo 效率不行
+   //todo 上滤用于组装 （大）小顶堆，元素在尾部添加， 下滤用于替换求最大，元素在头部添加
     public static void main( String[] args ) {
         Solution_703 h = new Solution_703(3, new int[]{4,5,8,2});
         System.out.println(h.add(3));
