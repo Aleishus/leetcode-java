@@ -1,8 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-import java.util.Map;
-
 /**
  * Zhouxi O_o
  *
