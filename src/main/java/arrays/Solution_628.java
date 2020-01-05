@@ -7,7 +7,6 @@ public class Solution_628 {
     int a = -1001;
     int b = a;
     int c = a;
-    int multiply = Integer.MIN_VALUE;
 
     for (int n : nums) {
       if (n > a) {
@@ -20,14 +19,11 @@ public class Solution_628 {
       } else if (n > c) {
         c = n;
       }
-      int x = a * b * c;
-      if (x > multiply) {
-        multiply = x;
-      }
     }
-    return multiply;
+    return 0;
 
   }
+  //todo 求5个数 最小两个和最大三个
 
   public static void main(String[] args) {
    int [] nums =  {-4,-3,-2,-1,60} ;
